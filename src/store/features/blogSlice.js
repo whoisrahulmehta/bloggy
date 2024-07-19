@@ -1,6 +1,33 @@
 // blogSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
+const loadTasksFromLocalStorage = () => {
+  try {
+      const serializedState = localStorage.getItem('blogs');
+      if (serializedState === null) {
+          return [];
+      }
+      return JSON.parse(serializedState);
+  } catch (e) {
+      console.warn("Could not load tasks from local storage", e);
+      return [];
+  }
+};
+
+// Function to save tasks to local storage
+const saveTasksToLocalStorage = (blogs) => {
+  try {
+      const serializedState = JSON.stringify(blogs);
+      localStorage.setItem('tasks', serializedState);
+  } catch (e) {
+      console.warn("Could not save tasks to local storage", e);
+  }
+};
+
+
+
+
+
 const initialState = {
   blogs: [
     {

@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { addBlog } from "../store/features/blogSlice";
+import { useNavigate } from "react-router-dom";
 // import { useHistory } from "react-router-dom"; // If you plan to use history for navigation
 
 function Create() {
+  const time =new Date();
+  const navigate =useNavigate();
   const dispatch = useDispatch() ;
   // const blogs = useSelector((state)=>state.blog.blogs)
   const [newData, setNewData] = useState({
+    id: time,
     author: "",
     heading: "",
     summary: "",
@@ -35,6 +39,7 @@ function Create() {
     })
   )
    }
+   navigate('/blogs');
   }
 
   return (
@@ -84,7 +89,7 @@ function Create() {
             placeholder="Write The Blog Here! Best Wishes"
           ></textarea>
         </label>
-        <button type="submit">Submit Your Blog</button>
+        <button type="submit" >Submit Your Blog</button>
       </form>
     </div>
   );
