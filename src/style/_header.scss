@@ -1,0 +1,80 @@
+header {
+  position: relative;
+  order: 1;
+  // padding: 1px 20px;
+  @include MFD;
+  border-radius: $baseBR * 1.4;
+  height: 90vh;
+  width: 100%;
+  @include FC;
+  justify-content: space-between;
+  background: url("https://images.unsplash.com/photo-1561344640-2453889cde5b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTgzMzI3NjR8&ixlib=rb-4.0.3&q=85");
+  background-size: cover;
+  background-position: 100%;
+  animation: flowing 30s linear infinite alternate;
+
+  .brand {
+    font-size: 2vmax;
+    text-align: center;
+    @include FR;
+    justify-content: start;
+  }
+  .search {
+    font-size: 1.6vmax;
+    &:hover {
+      color: $hover-col;
+      translate: translateY(1%);
+    }
+  }
+  .title {
+    position: absolute;
+    @include MFD;
+    // background: lighten(gold, 30%);
+    background: transparent;
+    backdrop-filter: blur(4px);
+    bottom: 7%;
+    height: 10%;
+    width: 100%;
+    padding: 0 2%;
+    @include FR;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100%;
+    @include FC;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: glow ease 2s infinite;
+  }
+  b {
+    font-size: 4vmax;
+    font-weight: 500;
+  }
+  i {
+    font-size: 3vmax;
+    font-weight: 400;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px lightpink, 0 0 5px lightblue;
+  }
+  to {
+    text-shadow: 0 0 20px lightpink, 0 0 40px lightblue;
+  }
+}
+
+@keyframes flowing {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}

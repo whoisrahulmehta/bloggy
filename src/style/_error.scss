@@ -1,0 +1,28 @@
+
+.Error {
+  @include FC;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background: rgba($color: gray, $alpha: 0.2);
+  p {
+    font-size: 2rem;
+    &:nth-child(2) {
+      font-size: 14rem;
+      color: red;
+    }
+  }
+  button {
+    background: white;
+    color: black;
+
+    padding: 1% 4%;
+    border-radius: 20px;
+
+    font-size: 1rem;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+}

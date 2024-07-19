@@ -1,0 +1,62 @@
+  footer {
+    order: 13;
+  width: 100%;
+  height: 700px !important;
+  color: black;
+    // background: darken(white, 10%);
+    @include FC;
+    .top {
+      height: 95%;
+      width: 100%;
+      background: white;
+      @include FR;
+      justify-content: space-between;
+      .A,
+      .B {
+        width: 50%;
+        height: 100%;
+        padding: 2%;;
+      }
+      .A {
+        font-size: 5rem;
+        padding: 2%;
+      }
+      .B {
+        @include FC;
+        justify-content: space-evenly;
+        h1 {
+          font-size: 3rem;
+          font-weight: 400;
+          height: 10%;
+        }
+        .links {
+          @include FC;
+          justify-content: space-evenly;
+        }
+      }
+    }
+    .bottom {
+      height: 5%;
+      width: 100%;
+      background: white;
+      @include FR;
+      justify-content: space-evenly;
+      .brand{
+        color: gold;
+      }
+      p {
+        width: 30%;
+        color: gray;
+        &:first-child {
+          color: black;
+          font-weight: 600;
+          font-style: italic;
+          font-size: 2rem;
+        }
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+

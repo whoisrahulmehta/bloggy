@@ -1,0 +1,61 @@
+$logo : gold ;
+$text-light : wheat;
+$baseBR : 10px;
+$hover-col: lighten(green, 20%);
+$parallax-depth: 0.5;
+$text-hover : lighten(gold, 30%);
+// Define color variables
+$color-lightpink: lightpink;
+$color-lightblue: lightblue;
+$color-lightgreen: lightgreen;
+$color-lightpurple: lavender; // Example color
+
+// Text colors
+$text-color: #333; // Default text color
+$text-color-light: #666; // Lighter text color
+
+// Button colors
+$button-bg-color: $color-lightblue;
+$button-text-color: white;
+
+// Border colors
+$border-color: #ccc;
+
+// Background colors
+$background-color: white;
+$alternate-background-color: lighten(wheat, 10%);
+
+%box {
+    border: 1px solid tansparent;
+    border-radius: $baseBR;
+  }
+  @mixin MFD {
+    @extend %box;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  @mixin MFL {
+    @extend %box;
+    background: rgba(0, 0, 0, 1);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: black;
+  }
+@mixin FC{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin FR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin blurry {
+    background-color: rgba(255,255,255, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}

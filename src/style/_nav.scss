@@ -1,0 +1,57 @@
+nav{
+    z-index: 2;
+    order: 3;
+    height: 1.32%;
+    padding: 0 1% ;
+    width: 100%;
+    // @include MFD;
+    border-radius: 0;
+    @include FR;
+    justify-content: space-between;
+     position: fixed; 
+      top: 0;
+      backdrop-filter: blur(5px);
+    .links{
+    @include FR;
+      width: 30%;
+      gap: 1%;
+    justify-content: space-evenly;
+    p{
+        padding: 0 4%;
+        color: $text-light;
+        transition: all ease 0.2s;
+        &:hover{
+            color: $text-hover;
+            transform: scale(1.04);
+            // @include blurry;
+        }
+    }
+    }
+  }
+.brand{
+    // font-size: 3rem;
+    img{
+        height: 10%;
+        width: 10%;
+        object-fit: cover;
+    }
+}
+.brand ,.user{
+    @include FR;
+    justify-content: start;
+    gap: 5%;
+    width: 30%;
+}
+.user{
+    justify-content: end;
+    padding-right: 5%;
+}
+.linksItem{
+    a{
+        font-size: 1rem;
+        &:hover{
+            transform: scale(1.1);
+            color: gold;
+        }
+    }
+}

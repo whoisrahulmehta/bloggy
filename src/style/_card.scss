@@ -1,0 +1,61 @@
+.Card {
+  order: 9;
+  width: 100%;
+  // background-color: aliceblue;
+  height: 16%;
+  @include FR;
+  gap: 1%;
+  padding: 2% 3%;
+  .cards {
+    width: 22%;
+    height: 100%;
+    border-radius: 20px;
+    @include FC;
+    color: black;
+    background-color: antiquewhite;
+    &:hover {
+      transform: scale(1.023);
+    }
+    &:first-child {
+      width: 56%;
+      background-color: #348734;
+      color: wheat;
+      .name {
+        font-size: 5rem;
+        font-style: italic;
+      }
+    }
+    &:nth-child(2) {
+      background: repeating-linear-gradient(45deg, wheat, #348734, wheat);
+      background-size: 150%;
+      color: wheat;
+      font-style: oblique;
+    }
+    &:last-child {
+      background-color: wheat;
+      .button {
+        border-color: white;
+      }
+    }
+    .name {
+      height: 70%;
+      width: 100%;
+      @include FR;
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      // padding: 0 10% ;
+    }
+    .button {
+      background-color: transparent;
+      border-radius: 20px;
+      padding: 10px 30px;
+      border: 1px solid wheat;
+    }
+  }
+  img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+}

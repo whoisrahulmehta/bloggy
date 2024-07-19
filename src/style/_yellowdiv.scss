@@ -1,0 +1,75 @@
+.Yellowdiv {
+  order: 5;
+  margin: 0;
+  width: 100%;
+  z-index: 2;
+  height: 35%;
+  background: darkkhaki;
+  border-radius: 10px;
+  @include FC;
+  justify-content: start;
+  align-items: center;
+  .row {
+    height: 33%;
+    width: 100%;
+    border-bottom: 0.3px solid rgba(211, 211, 211, 0.4);
+    color: black;
+  }
+}
+.intro {
+  height: 100%;
+  font-size: 2rem;
+  text-align: justify;
+  padding: 10%;
+  font-weight: 300;
+  color: black;
+  font-family: system-ui;
+  line-height: normal;
+}
+.row {
+  &:nth-child(2) {
+    @include FR;
+    justify-content: space-evenly;
+
+  }
+  &:nth-child(3){
+    @include FR;
+  }
+}
+.columns {
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+  @include FR;
+align-items: center;
+
+  &:nth-child(2) {
+    text-align: justify;
+    p {
+      font-size: 12px;
+    }
+  }
+  &:nth-child(3) {
+    @include FC;
+    justify-content: center;
+    gap: 7%;
+  }
+  a {
+    // @include FR;
+    gap: 2px;
+    // align-items: center;
+    height: 4%;
+    text-decoration: underline;
+    &:first-child {
+      text-decoration: none;
+    }
+  }
+}
+.userimg{
+    img{
+        height: 60%;
+        width: 60%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+}
