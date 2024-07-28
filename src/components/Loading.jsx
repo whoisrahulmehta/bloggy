@@ -21,18 +21,18 @@ function Loading() {
   return (
     <div className="content">
       {loadingStep === 1 && (
-        <div className="loading1">
-          <span>BLOGGY</span>
+        <div className="loading1 flex flex-row justify-center items-center">
+          <span className="">BLOGGY</span>
         </div>
       )}
       {loadingStep === 2 && (
-        <div className="loading">
+        <div className="loading flex flex-row justify-center items-center">
           <span>Welcome</span>
         </div>
       )}
       {bar && (
-        <div className="loader">
-          <p className="bar2"></p>
+        <div className="loader flex flex-row justify-start items-center">
+          <p className="bar2 flex flex-row justify-start items-center"></p>
           <p className="bar"></p>
           {/* <p>Loading :  {loadingCount} %</p> */}
         </div>

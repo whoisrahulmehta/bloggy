@@ -8,11 +8,11 @@ function Featured() {
   const navigate = useNavigate();
 
   return (
-    <div className="Featured" data-scroll data-scroll-section data-scroll-speed=".3">
+    <div className="Featured  sm:h-[fit-content] py-10 h-[60vh]" >
       <section className="heading">
         <h1>Featured Blogs !</h1>
       </section>
-      <section className="fea">
+      <section className="fea flex sm:flex-row flex-col  sm:flex-wrap sm:justify-center justify-start items-center sm:items-center ">
         {[
           {
             heading: "Exploring the Hidden Gems of Japan",
@@ -51,21 +51,20 @@ function Featured() {
               "Women have a diverse psyche as compared to Men. Women are not easy to understand.",
           },
         ].map((fb, i) => (
-          <motion.div className="card" key={i} initial={{opacity:0 , rotateX:"180deg"}} whileInView={{rotateX:0 ,opacity:1}} transition={{duration:2}}>
-            <h2>{fb.heading}</h2>
+          <motion.div className="card sm:w-[45vw] sm:h-[45vh]  w-full  h-[70vh]" key={i} initial={{opacity:0 , rotateX:"180deg"}} whileInView={{rotateX:0 ,opacity:1}} transition={{duration:2}}>
+            <h2 className="text-yellow-500">{fb.heading}</h2>
             <p className="fbbody">{fb.content}</p>
             <h4>{fb.author}</h4>
             <p className="hoveree">
               <p> <FontAwesomeIcon icon={faPen}/> By {fb.author}</p>
               {/* <p >goto Blogs for more</p> */}
-
             </p>
           </motion.div>
         ))}
       </section>
-      <div className="btn">
+      {/* <div className="btn">
         <button className="rm" onClick={()=>navigate('/blogs')}>Read More Now -</button>
-      </div>
+      </div> */}
     </div>
   );
 }

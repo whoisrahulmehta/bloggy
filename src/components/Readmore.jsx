@@ -10,7 +10,7 @@ function Readmore() {
   const blog = blogs.find((blog) => blog.id === Number(id));
 
   return (
-    <div className="Readmore">
+    <div className="Readmore pt-20">
       <Navbar />
       <div className="blog">
         <div className="heading">{blog.heading} 

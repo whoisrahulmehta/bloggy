@@ -3,11 +3,7 @@
     order: 6;
     height: 100vh;
     width: 100%;
-    // background-color: white
-    @include FR;
     .square{
-        width: 80%;
-        height: 80%;
         background-color: #347854 ;
         border-radius: 25px;
         position: relative;
@@ -25,8 +21,8 @@
         .circle{
             @include FR;
             background-color: white;
-            width: 150px;
-            height:150px;
+            // width: 150px;
+            // height:150px;
             border-radius: 50%;
         }
         .innercircle{

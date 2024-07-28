@@ -26,8 +26,8 @@
     padding: 4% 0;
   }
   label{
-    width: 70%;
-    @include FR;
+    // width: 70%;
+    // @include FR;
     height: 10%;
     justify-content: space-between;
     // border: 1px solid wheat;
@@ -42,7 +42,7 @@
   }
   input{
 padding: 1%;
-    width: 40%;
+    // width: 40%;
     border-bottom: 1px solid wheat;
     color: wheat;
   }

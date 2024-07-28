@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa';
 
 function Reviews() {
   return (
-    <div className='Reviews'>
+    <div className='Reviews sm:h-[40vh] h-[80vh]'>
 {
    [
     {
@@ -32,10 +32,10 @@ function Reviews() {
       stars:7.8
     }
   ].map((rev, i)=>(
-    <div className="revs" key={i}>
+    <div className="revs flex sm:flex-row flex-col-reverse items-center sm:justify-center justify-start" key={i}>
       <span>{rev.reviewer}</span>
-      <span>{rev.content}</span>
-      <span> Rating: {rev.stars} <FaStar /></span>
+      <span className='w-full sm:w-auto sm:px-0 px-7'>{rev.content}</span>
+      <span className=' flex flex-row justify-center items-center'> Rating: {rev.stars} <FaStar /></span>
     </div>
   ))
 }

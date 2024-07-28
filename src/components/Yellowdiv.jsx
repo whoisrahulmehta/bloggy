@@ -12,9 +12,11 @@ import {
 
 function Yellowdiv() {
   return (
-    <div className="Yellowdiv" data-scroll data-scroll-section data-scroll-speed=".3">
-      <div className="row">
-        <p className="intro">
+    <div
+      className="Yellowdiv py-0"
+    >
+      <div className="row sm:h-[33%] h-[fit-content] font-[500]">
+        <p className="intro font-[600]">
           Bloggy is a marketplace cum collection of the best and most populor
           stories & content of around the globe{" "}
           <FontAwesomeIcon icon={faGlobeAsia} />.
@@ -23,11 +25,11 @@ function Yellowdiv() {
           blogs.
         </p>
       </div>
-      <div className="row">
-        <div className="columns">
-          <p>What we can offer you :</p>
+      <div className="row flex sm:h-[40%] h-[fit-content] sm:flex-row flex-col justify-center items-center sm:py-10 py-14">
+        <div className="columns sm:w-[30%] w-[100%] sm:h-[100%] h-[fit-content] sm:px-0 px-7 gap-2" >
+          <p className="text-3xl py-1">What we can offer you :</p>
         </div>
-        <div className="columns">
+        <div className="columns sm:w-[30%] w-[100%] sm:px-0 px-9 py-2">
           <p>
             Welcome to Bloggy, your ultimate destination for discovering the
             best blogs from around the globe! At Bloggy, we curate a diverse
@@ -40,7 +42,7 @@ function Yellowdiv() {
             Bloggy be your guide to the world's finest blogs.
           </p>
         </div>
-        <div className="columns">
+        <div className="columns sm:w-[30%] w-[100%] sm:px-0 px-7">
           <p>Social :</p>
           {[
             {
@@ -64,20 +66,28 @@ function Yellowdiv() {
               icon: <FaGithubAlt />,
             },
           ].map((a, i) => (
-            <a href="#" key={i}>
-              {a.name} {a.icon}
+            <a
+              href="#"
+              key={i}
+              className="links w-full flex flex-row justify-center items-center gap-[30px]"
+            >
+              <span>{a.name}</span> <span>{a.icon}</span>
             </a>
           ))}
         </div>
       </div>
-      <div className="row">
-        <div className="columns">
-          <p>Hi From one of our user / writer</p>
+      <div className="row flex sm:h-[40%] h-[fit-content] sm:flex-row flex-col justify-center items-center sm:py-10 py-14">
+        <div className="columns sm:w-[30%] w-[100%] sm:h-[100%] h-[fit-content] sm:px-0 px-7">
+          <p>Hi From one of our user / writer </p>
           {/* <a href= "#">Read More</a> */}
         </div>
-        <div className="columns">
-          <p className="userimg">
-            <img src= "https://github.com/whoisrahulmehta/assetsforwebsites/raw/26418d60f1cbffe11f7968ca93d7d156ba549cd5/bloggy/userimg.jpg" alt="userimg" />
+        <div className="columns sm:w-[30%] w-[100%] sm:h-[100%] h-[fit-content] sm:px-0 px-7">
+          <p className="userimg w-full h-full flex flex-row justify-center sm:items-center items-start">
+            <img
+            className="w-full h-full"
+              src="https://github.com/whoisrahulmehta/assetsforwebsites/raw/26418d60f1cbffe11f7968ca93d7d156ba549cd5/bloggy/userimg.jpg"
+              alt="userimg"
+            />
           </p>
         </div>
       </div>

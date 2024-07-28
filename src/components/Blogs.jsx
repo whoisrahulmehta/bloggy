@@ -14,24 +14,30 @@ function Blogs() {
 
   console.log(blogs);
   return (
-    <div  className="Blogs">
+    <div className="Blogs sm:pt-10 pt-24">
       <Navbar />
       <div className="heading">
-        <p className="headingLine">
-          Blogs handpicked from accross the globe <FaGlobe color="blue" />
+        <p className="headingLine flex flex-row items-center justify-end gap-4 text-xl sm:text-3xl">
+          <span>Blogs handpicked from accross the </span>
+          <span>
+            {" "}
+            <FaGlobe color="blue" />
+          </span>
         </p>
       </div>
       <div className="blogsCo">
-        {
-          blogs.map((blog, index)=>(
-            <div className="card" key={index}>
+        {blogs.map((blog, index) => (
+          <div className="card sm:w-[80%] w-full sm:text-[1rem] text-[0.9rem]"  key={index}>
             <h2>{blog.heading}</h2>
             <p className="fbbody">{blog.summary}</p>
             <h4>{blog.author}</h4>
-            <p className="hoveree"><Link to = {`/blogs/${blog.id}`} >Read More form : {blog.author}</Link></p>
+            <p className="hoveree">
+              <Link to={`/blogs/${blog.id}`}>
+                Read More form : {blog.author}
+              </Link>
+            </p>
           </div>
-          ))
-        }
+        ))}
       </div>
       <Footer />
     </div>

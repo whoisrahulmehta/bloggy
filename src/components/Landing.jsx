@@ -6,40 +6,48 @@ import React from "react";
 function Landing() {
   return (
     <>
-      <div className="welnote" >
+      <div
+      className="welnote sm:h-[270px] h-[30vh] flex sm:flex-row  justify-center items-center py-10">
+        <p className="vertical sm:right-0 right-1 sm:w-[1.5%] w-[5%]">
+          {" "}
+          <span style={{ color: "gold", fontSize: "14px" }}>W.</span>{" "}
+          <span className="verText">The Best Content</span>
+        </p>
+
         <motion.div
           initial={{ width: 0, opacity: 0 }}
-          whileInView={{ opacity: 1, width: "60%" }}
+          whileInView={{ opacity: 1, width: "100%" }}
           transition={{ duration: 2 }}
-          className="texted"
+          className="texted sm:text-[3rem] font-[700] italic px-[1%] text-2xl h-[50%] sm:h-[100%]"
         >
           {["We Have the", "Best Ever Blogs", "Available for You With Us"].map(
             (a, i) => (
-              <div className="tex" key={i}>
+              <motion.div className="tex " key={i}>
                 {i === 1 && (
-                  <span className="empty">
+                  <motion.span
+                    className="empty"
+                    initial={{ width: "0%" }}
+                    whileInView={{ width: "20%" }}
+                    transition={{ duration: 1, ease: "linear" }}
+                  >
                     {" "}
                     <FontAwesomeIcon icon={faNewspaper} />{" "}
-                  </span>
-                )}
-                {i === 0 && (
-                  <p className="vertical">
-                    {" "}
-                    <span style={{ color: "gold", fontSize: "14px" }}>
-                      W.
-                    </span>{" "}
-                    <span className="verText">The Best Content</span>
-                  </p>
+                  </motion.span>
                 )}
                 {a}
-              </div>
+              </motion.div>
             )
           )}
         </motion.div>
-        <div className="imgArea">
+        <div className="imgArea sm:h-[100%] h-[0%] sm:w-[50%] w-[0%]">
           <img
             src="https://github.com/whoisrahulmehta/assetsforwebsites/raw/26418d60f1cbffe11f7968ca93d7d156ba549cd5/bloggy/bookpicture.png"
             alt="books"
+            className="
+            w-[100%]
+            h-[100%]
+            object-cover
+            "
           />
         </div>
       </div>

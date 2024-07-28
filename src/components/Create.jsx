@@ -43,11 +43,11 @@ function Create() {
   }
 
   return (
-    <div className="create">
+    <div className="create pt-20">
       <Navbar />
       <h1>Let's showcase your thoughts!</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="author">
+        <label htmlFor="author" className="sm:w-[70%] w-[97%] flex sm:flex-row flex-col items-center justify-center">
           What is your Name?
           <input
             type="text"
@@ -56,9 +56,10 @@ function Create() {
             placeholder="Your Name"
             value={newData.author}
             onChange={(e) => handleChange(e)}
+            className="sm:w-[40%] w-[100%]"
           />
         </label>
-        <label htmlFor="heading">
+        <label htmlFor="heading" className="sm:w-[70%] w-[97%] flex sm:flex-row flex-col items-center justify-center">
           What is the Title of your Blog?
           <input
             type="text"
@@ -67,25 +68,28 @@ function Create() {
             placeholder="My First Blog"
             value={newData.heading}
             onChange={(e) => handleChange(e)}
+            className="sm:w-[40%] w-[100%]"
           />
         </label>
-        <label htmlFor="summary">
+        <label htmlFor="summary" className="sm:w-[70%] w-[97%] flex sm:flex-row flex-col items-center justify-center">
           Write a Summary of your blog!
           <textarea
             id="summary"
             name="summary"
             value={newData.summary}
             onChange={(e) => handleChange(e)}
+            className="sm:w-[40%] w-[100%]"
             placeholder="Add the short summary of your blog here so readers can have a brief idea of your blog's theme."
           ></textarea>
         </label>
-        <label htmlFor="content">
+        <label htmlFor="content" className="sm:w-[70%] w-[97%] flex sm:flex-row flex-col items-center justify-center">
           Let's begin writing your blog here!
           <textarea
             id="content"
             name="content"
             value={newData.content}
             onChange={(e) => handleChange(e)}
+            className="sm:w-[40%] w-[100%]"
             placeholder="Write The Blog Here! Best Wishes"
           ></textarea>
         </label>

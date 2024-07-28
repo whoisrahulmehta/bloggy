@@ -7,7 +7,7 @@ function Playingcard() {
     window.addEventListener("mousemove", (e) => {
       const x = e.clientX;
       const y = e.clientY;
-      const deltax = x - window.innerHeight /2;
+      const deltax = x - window.innerWidth /2;
       const deltay = y - window.innerHeight /2;
 
       const degress = Math.atan2(deltay, deltax) * (180/Math.PI);
@@ -19,17 +19,17 @@ function Playingcard() {
   });
 
   return (
-    <div className="Playingcard" data-scroll data-scroll-section data-scroll-speed="-.5">
-      <div className="square">
+    <div className="Playingcard flex flex-row items-center justify-center" >
+      <div className="square sm:w-[80%] w-full  sm:h-[80%] h-full  ">
         <div className="container">
-          <div className="circle">
-            <div className="innercircle">
+          <div className="circle sm:w-[150px] sm:h-[150px]  w-[135px] h-[135px]">
+            <div className="innercircle" >
             <div className="arm" style={{ transform: `rotate(${angle}deg)` }}>
                 <div className="eye"></div>
               </div>
             </div>
           </div>
-          <div className="circle">
+          <div className="circle sm:w-[150px] sm:h-[150px]  w-[135px] h-[135px]">
             <div className="innercircle">
               <div className="arm" style={{transition:"all ease", transform: `rotate(${angle}deg)` }}>
                 <div className="eye"></div>

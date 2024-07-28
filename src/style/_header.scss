@@ -6,7 +6,7 @@ header {
   border-radius: $baseBR * 1.4;
   height: 90vh;
   width: 100%;
-  @include FC;
+  // @include FC;
   justify-content: space-between;
   background: url("https://images.unsplash.com/photo-1561344640-2453889cde5b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTgzMzI3NjR8&ixlib=rb-4.0.3&q=85");
   background-size: cover;

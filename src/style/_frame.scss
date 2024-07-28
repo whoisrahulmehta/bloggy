@@ -14,10 +14,10 @@
     padding-left: 5%;
     h1 {
       height: fit-content;
-      width: 0%;
+      // width: 0%;
       overflow: hidden;
       white-space: nowrap;
-      font-size: clamp(3rem,11vw ,10rem);
+      font-size: clamp(3.5rem,11vw ,10rem);
       color: white;
       font-style: italic;
       animation: write ease-in 2s 1 forwards 0s;
@@ -35,7 +35,7 @@
     }
   }
   .btn{
-    width: 30%;
+    // width: 30%;
     height: 5%;
     position: absolute;
     bottom: 7%;

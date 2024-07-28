@@ -1,13 +1,11 @@
 .Card {
   order: 9;
   width: 100%;
-  // background-color: aliceblue;
-  height: 16%;
-  @include FR;
+  // @include FR;
   gap: 1%;
   padding: 2% 3%;
   .cards {
-    width: 22%;
+    // width: 22%;
     height: 100%;
     border-radius: 20px;
     @include FC;
@@ -17,7 +15,7 @@
       transform: scale(1.023);
     }
     &:first-child {
-      width: 56%;
+      // width: 56%;
       background-color: #348734;
       color: wheat;
       .name {
